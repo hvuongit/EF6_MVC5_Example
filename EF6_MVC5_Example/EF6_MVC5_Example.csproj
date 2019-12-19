@@ -138,15 +138,41 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="DAL\SchoolConfiguration.cs" />
     <Compile Include="DAL\SchoolContext.cs" />
     <Compile Include="DAL\SchoolInitializer.cs" />
+    <Compile Include="DAL\SchoolInterceptorLogging.cs" />
+    <Compile Include="DAL\SchoolInterceptorTransientErrors.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Logging\ILogger.cs" />
+    <Compile Include="Logging\Logger.cs" />
+    <Compile Include="Migrations\201912190811548_InitialCreate.cs" />
+    <Compile Include="Migrations\201912190811548_InitialCreate.designer.cs">
+      <DependentUpon>201912190811548_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912190841511_MaxLengthOnNames.cs" />
+    <Compile Include="Migrations\201912190841511_MaxLengthOnNames.designer.cs">
+      <DependentUpon>201912190841511_MaxLengthOnNames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912190852024_ColumnFirstName.cs" />
+    <Compile Include="Migrations\201912190852024_ColumnFirstName.designer.cs">
+      <DependentUpon>201912190852024_ColumnFirstName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912190959364_ComplexDataModel.cs" />
+    <Compile Include="Migrations\201912190959364_ComplexDataModel.designer.cs">
+      <DependentUpon>201912190959364_ComplexDataModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Course.cs" />
+    <Compile Include="Models\Department.cs" />
     <Compile Include="Models\Enrollment.cs" />
+    <Compile Include="Models\Instructor.cs" />
+    <Compile Include="Models\OfficeAssignment.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\EnrollmentDateGroup.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -208,6 +234,20 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201912190811548_InitialCreate.resx">
+      <DependentUpon>201912190811548_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912190841511_MaxLengthOnNames.resx">
+      <DependentUpon>201912190841511_MaxLengthOnNames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912190852024_ColumnFirstName.resx">
+      <DependentUpon>201912190852024_ColumnFirstName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912190959364_ComplexDataModel.resx">
+      <DependentUpon>201912190959364_ComplexDataModel.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
